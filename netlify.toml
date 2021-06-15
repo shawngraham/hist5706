@@ -29,16 +29,11 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'unsafe-inline' 'unsafe-eval' https://docks-child-theme.netlify.app/; script-src 'unsafe-inline' 'unsafe-eval' https://docks-child-theme.netlify.app/; frame-ancestors https://jamstackthemes.dev; manifest-src https://docks-child-theme.netlify.app/; connect-src 'self'; font-src https://docks-child-theme.netlify.app/; img-src 'self' data:; style-src 'unsafe-inline' 'unsafe-eval' https://docks-child-theme.netlify.app/ "
+    Content-Security-Policy = "default-src 'self'; frame-ancestors https://jamstackthemes.dev; manifest-src 'self'; connect-src 'self'; font-src 'self; img-src 'self' data:; script-src 'self'; style-src 'self'"
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin"
     Feature-Policy = "geolocation 'self'"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
+    X-Nf-Request-Id = "e0a5dd13-5c7a-4d54-b7d5-02a5e9f084f6"
 
 [dev]
   framework = "#custom"
