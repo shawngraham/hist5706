@@ -21,6 +21,25 @@
 [context.next.environment]
   HUGO_ENV = "next"
 
+[[headers]]
+  for = "*/"
+  [headers.values]
+    Content-Type = "application/manifest+json; charset=UTF-8"
+    Access-Control-Allow-Origin = "*"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = "default-src https://docks-child-theme.netlify.app/; script-src https://docks-child-theme.netlify.app/; frame-ancestors https://jamstackthemes.dev; manifest-src 'self'; connect-src 'self'; font-src https://docks-child-theme.netlify.app/; img-src 'self' data:; style-src https://docks-child-theme.netlify.app/ "
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin"
+    Feature-Policy = "geolocation 'self'"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+
 [dev]
   framework = "#custom"
   command = "npx rimraf public resources functions && npx hugo server --bind=0.0.0.0 --disableFastRender"
