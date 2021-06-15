@@ -29,7 +29,7 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'self'; frame-ancestors https://jamstackthemes.dev; manifest-src 'self'; connect-src 'self'; font-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'nonce-r@nd0m' "
+    Content-Security-Policy = "default-src https:; script-src https: 'self' 'nonce-r@d0m'; frame-ancestors https://jamstackthemes.dev; manifest-src 'self'; connect-src 'self'; font-src 'self'; img-src 'self' data:; style-src https: 'self' "
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin"
     Feature-Policy = "geolocation 'self'"
